@@ -35,6 +35,14 @@
 
 // routes ========================================
 
+	// front-end route ---------------------------
+
+	app.get('*', function(req, res){
+
+		res.sendFile('./public/index.html');
+		
+	});
+
 	// api ---------------------------------------
 	// get all todos
 
