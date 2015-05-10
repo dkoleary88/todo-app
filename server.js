@@ -1,6 +1,6 @@
 // server.js
 
-	// set up ---------------------------------
+	// set up ------------------------------------
 
 	var express = require('express');
 	var app = express();
@@ -10,7 +10,7 @@
 	var methodOverride = require('method-override');
 
 
-	// configuration --------------------------
+	// configuration -----------------------------
 
 	mongoose.connect('mongodb://localhost');
 
@@ -21,7 +21,14 @@
 	app.use(bodyParser.json({ type: 'application/vnd.api+json'}));
 	app.use(methodOverride());
 
-	// listen - start app with node server.js --
+	// Todo mongoose model -----------------------
+
+	var Todo = mongoose.model('Todo', {
+		text : String
+	});
+
+
+	// listen - start app with node server.js ----
 
 	app.listen(8080);
 	console.log('App is listening on port 8080');
