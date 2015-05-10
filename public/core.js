@@ -2,7 +2,7 @@
 
 var dkoTodo = angular.module('dkoTodo', []);
 
-function mainController ($scope, $html) {
+dkoTodo.controller('mainController', function($scope, $http) {
 	$scope.formData = {};
 
 	// when landing on the page, get all todos and show them
@@ -41,4 +41,4 @@ function mainController ($scope, $html) {
     };
 
 
-}
+});
